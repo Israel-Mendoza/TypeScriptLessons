@@ -73,3 +73,43 @@ function combine3(x: Combinable, y: Combinable, returnType: CombinationType) {
 
 // The combine function type can be read as:
 // function combine3(x: Combinable, y: Combinable, returnType: CombinationType): Combinable
+
+
+// More custom types:
+
+type namedAndAgedPerson = { name: string, age: number };
+
+let anotherPerson = {
+    name: "Israel",
+    age: 28
+};
+
+let anAlien = {
+    name: "Marvin",
+    age: Infinity,
+    planet: "Mars",
+};
+
+let namelessPerson = {
+    age: 18,
+    planet: "Pluto",
+}
+
+
+function introducePerson(person: namedAndAgedPerson) {
+    console.log(`My name is ${person.name} and I am ${person.age} years old!`);
+}
+
+
+// Calling the function
+introducePerson(anotherPerson);
+// My name is Israel and I am 28 years old!
+
+introducePerson(anAlien);
+// My name is Marvin and I am Infinity years old!
+
+introducePerson(namelessPerson);
+// Argument of type '{ age: number; planet: string; }'
+// is not assignable to parameter of type 'namedAndAgedPerson'.
+//   Property 'name' is missing in type '{ age: number; planet: string; }' 
+// but required in type 'namedAndAgedPerson'.ts(2345)
