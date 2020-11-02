@@ -108,7 +108,7 @@ introducePerson(anotherPerson);
 introducePerson(anAlien);
 // My name is Marvin and I am Infinity years old!
 
-introducePerson(namelessPerson);
+// introducePerson(namelessPerson);
 // Argument of type '{ age: number; planet: string; }'
 // is not assignable to parameter of type 'namedAndAgedPerson'.
 //   Property 'name' is missing in type '{ age: number; planet: string; }' 
