@@ -37,7 +37,7 @@ class Department {
         console.log(`The ${this.name.toLowerCase()} has ${this.employees.length} employees.`);
     }
 
-    addEmployee(this: Department, employee: Employee) {
+    addEmployee(this: Department, employee: Employee): void {
         console.log(`${employee.firstName}, welcome to the ${this.name.toLowerCase()} deparment!`);
         this.employees.push(employee);
     }
