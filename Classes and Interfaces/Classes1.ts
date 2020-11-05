@@ -19,7 +19,6 @@ class Employee {
         console.log(`Happy Birthday to ${this.firstName}`);
         this.age++;
     }
-
 }
 
 
@@ -50,7 +49,7 @@ class Department {
     }
 }
 
-
+// Instantiating the Department class
 const accounting = new Department("Accounting", 1001);
 
 accounting.addEmployee(new Employee("Israel", "Mendoza", 28));
